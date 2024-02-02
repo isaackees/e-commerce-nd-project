@@ -27,22 +27,12 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = props => {
       )}
       <Gutter>
         <div className={classes.grid}>
-          {docs?.map((doc, index) => {
+          {docs?.map((doc) => {
             if (typeof doc === 'string') return null
 
             return (
-              <div
-                key={index}
-                className={[
-                  classes.column,
-                  docs.length === 2 && classes['cols-half'],
-                  docs.length >= 3 && classes['cols-thirds'],
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                <Card relationTo={relationTo} doc={doc} showCategories />
-              </div>
+             <Card key={doc.id} relationTo={relationTo} doc={doc} showCategories />
+              
             )
           })}
         </div>
