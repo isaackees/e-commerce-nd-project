@@ -6,6 +6,9 @@ const nextConfig = {
   typescript: {
     ingnoreBuildErrors: true,
   },
+  eslint: {
+    dirs: ['pages', 'utils'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+  },
   reactStrictMode: true,
   swcMinify: true,
   images: {

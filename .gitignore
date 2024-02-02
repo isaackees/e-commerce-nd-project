@@ -9,3 +9,4 @@ node_modules
 .prettierrc.js
 .vscode
 .env.example
+package-lock.json
