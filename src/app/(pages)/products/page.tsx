@@ -26,6 +26,7 @@ const Products = async () => {
 
     categories = await fetchDocs<Category>('categories')
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error)
   }
 

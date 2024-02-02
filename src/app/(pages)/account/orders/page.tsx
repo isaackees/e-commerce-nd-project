@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -38,7 +39,7 @@ export default async function Orders() {
       })
       ?.then(json => json.docs)
   } catch (error) {
-    console.error(error)
+    console.error('error #%d', error)
   }
 
   return (

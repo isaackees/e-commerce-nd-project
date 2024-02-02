@@ -1,11 +1,10 @@
+/* eslint-disable no-console */
 import React from 'react'
 import Link from 'next/link'
 
 import { Footer } from '../../../payload/payload-types'
 import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
 import FooterComponent from './FooterComponent'
-
-
 
 export async function Footer() {
   let footer: Footer | null = null
@@ -21,7 +20,6 @@ export async function Footer() {
   return (
     <>
       <FooterComponent footer={footer} />
-
     </>
   )
 }
